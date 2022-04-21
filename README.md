@@ -4,11 +4,12 @@ There is not much here, yet&hellip; [https://github.com/dcpetty/](https://github
 
 ## Repositories
 
+<!-- Because this is the dcpetty.github.io repo, all links must be to permalinks, not relative repo links. -->
 | Link | Description |
 | -- | -- |
-| [./beerpong](./beerpong) | A [Jupyter](https://jupyter.org/) notebook that solves a combinatorics problem. |
-| [./cv](./cv) | My CV. |
-| [./latex](./latex) | My LaTeX repository with template documents. |
+| [./beerpong](https://dcpetty.github.io/beerpong/) | A [Jupyter](https://jupyter.org/) notebook that solves a combinatorics problem. |
+| [./cv](https://dcpetty.github.io/cv/) | My CV. |
+| [./latex](https://dcpetty.github.io/latex/) | My LaTeX repository with template documents. |
 
 <hr>
 
