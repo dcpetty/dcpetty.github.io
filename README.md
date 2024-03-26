@@ -4,6 +4,8 @@ There is not much here, yet&hellip; [https://github.com/dcpetty/](https://github
 
 ## Repositories
 
+All repositories for `dcpetty` can be viewed at [https://github.com/dcpetty](https://github.com/dcpetty?tab=repositories&sort=name).
+
 <!-- Because this is the dcpetty.github.io repo, all links must be to permalinks, not relative repo links. -->
 
 | Link | Description |
