@@ -13,6 +13,7 @@ All repositories for `dcpetty` can be viewed at [https://github.com/dcpetty](htt
 | [./beerpong](https://dcpetty.github.io/beerpong/) | A [Jupyter](https://jupyter.org/) notebook that solves a combinatorics problem. |
 | [./cv](https://dcpetty.github.io/cv/) | My CV. |
 | [./latex](https://dcpetty.github.io/latex/) | My LaTeX repository with template documents. |
+| [./obsidian](https://dcpetty.github.io/obsidian/) | My public [Obsidian](https://obsidian.md/) notes [Jekyll](https://jekyllrb.com) repository. |
 
 <hr>
 
