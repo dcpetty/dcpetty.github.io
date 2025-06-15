@@ -6,7 +6,7 @@ In order to move the repository `repo` from [`psb-david-petty`](https://github.c
 1. Enable [Github Pages](https://pages.github.com/). Settings &rarr; Pages &rarr; Deploy from a branch: `main` &rarr; Save.
 1. Copy the `git clone` URI for SSH (`git@github.com:dcpetty/repo`).
 1. `git clone git@github.com:dcpetty/repo` into the `dcpetty` directory.
-1. Add the appropriate `[user]` information to `repo/.git/config`. <pre><br>[user]<br>&nbsp;&nbsp;&nbsp;&nbsp;name = dcpetty<br>&nbsp;&nbsp;&nbsp;&nbsp;email = 1700736+dcpetty@users.noreply.github.com</pre>
+1. Add the appropriate `[user]` information to `repo/.git/config`. <tt><br>[user]<br>&nbsp;&nbsp;&nbsp;&nbsp;name = dcpetty<br>&nbsp;&nbsp;&nbsp;&nbsp;email = 1700736+dcpetty@users.noreply.github.com</tt>
 1. Copy the latest [`.gitignore`](https://raw.githubusercontent.com/dcpetty/first/refs/heads/main/.gitignore) from [`dcpetty.github.io`](https://github.com/dcpetty/dcpetty.github.io/tree/main).
 1. 
 
