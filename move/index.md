@@ -8,7 +8,8 @@ In order to move the repository `repo` from [`psb-david-petty`](https://github.c
 1. `git clone git@github.com:dcpetty/repo` into the `dcpetty` directory.
 1. Add the appropriate `[user]` information (below) to `repo/.git/config`.
 1. Copy the latest [`.gitignore`](https://raw.githubusercontent.com/dcpetty/first/refs/heads/main/.gitignore) from [`dcpetty.github.io`](https://github.com/dcpetty/dcpetty.github.io/tree/main).
-1. 
+1. **Copy repository files from the `psb-david-petty` directory to the `dcpetty` directory.**
+1. `git add` as appropriate.
 
 > The appropriate `[user]` information in `repo/.git/config` for [`dcpetty`](https://github.com/dcpetty?tab=repositories&sort=name) repositories is:
 <pre>[user]
