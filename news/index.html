@@ -52,7 +52,7 @@
     def put_query(value):
       sch, loc, pth, _, _, _ = urlparse('https://google.com/search')
       # https://www.urlencoder.io/python/
-      params = {'tbm': 'nws', 'q': value, }
+      params = {'tbm': 'nws', 'q': value, } if value else dict()
       query = urlencode(params)
       parts = (sch, loc, pth, '', query, '', )
       uri = urlunparse(parts)
