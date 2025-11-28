@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>URI</title>
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.2/core.css">
+    <!-- This script tag bootstraps PyScript -->
+    <style>
+      .inter-all {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+      }
+      body { padding: 0 10%; }
+      label, input { width: 80%; font-size: x-large; }
+      #query { 
+        display: block; width: 100%; padding: 2%;
+        font-size: x-large; text-align: center; 
+      }
+      footer { 
+        border-top: thin solid #ccc; margin: 2em; 
+        color: #fff; font-size: x-small;
+      }
+      footer div { display: inline-block; }
+    </style>
+    <script type="module" src="https://pyscript.net/releases/2025.11.2/core.js"></script>
+  </head>
+  <body class="inter-all">
+    <!-- Now you can use <py-script> tag to write your python code inside-->
+    <py-script>
+    import sys
+    from pyscript import display, document, when, window
+    from urllib.parse import urlencode, urlparse, urlunparse
+
+    # Initialize static HTML.
+    title = document.querySelector('title')
+    title.innerText = window.location.href
+    header = document.querySelector('#h1-id')
+    header.innerText = window.location.href
+
+    disp = lambda s, x='\u00A0': display(f"{s}{x}", target='footer')
+
+    # Put URI with query into query link.
+    def put_query(value):
+      sch, loc, pth, _, _, _ = urlparse('https://google.com/search')
+      # https://www.urlencoder.io/python/
+      params = {'tbm': 'nws', 'q': value, }
+      query = urlencode(params)
+      parts = (sch, loc, pth, '', query, '', )
+      uri = urlunparse(parts)
+      document.querySelector("#query a").text = uri
+      document.querySelector("#query a").href = uri
+
+    put_query('')
+
+    # Fires on every change (typing, paste, delete)
+    # Alternative: only after each key press (ignores mouse paste)
+    # @when("keyup", "#inp")
+    @when("input", "#inp")
+    def on_input(evt):
+      value = document.querySelector("#inp").value
+      put_query(value)
+
+    # Update footer with display information.
+    disp(sys.version)
+    disp(dir(window.location))
+    disp(window.location.object_keys())
+    disp(window.location.object_values())
+    </py-script>
+    <main>
+      <h1 id="h1-id"></h1>
+      <p>This page (written with <a href="https://docs.pyscript.net/2025.11.2/">PyScript</a>) creates a clickable <a href="https://www.google.com/search">Google Search</a> link to search <a href="https://www.google.com/news">Google News</a> for your query.</p>
+      <div id="query"><a href="" target=”_blank”></a></div>
+      <label for="inp">Google News Query: </label>
+      <input id="inp" type="text" autocomplete="off">
+    </main>
+    <footer id="footer" ></footer>
+  </body>
+</html>
