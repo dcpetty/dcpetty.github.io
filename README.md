@@ -2,9 +2,15 @@
 
 The [Github](https://github.com/dcpetty/) account of [David C. Petty](http:/dcpetty.dev/).
 
-I have included [instructions](https://dcpetty.github.io/move/) for moving repositories from [`psb-david-petty`](https://github.com/github.com/psb-david-petty?tab=repositories&sort=name) to [`dcpetty`](https://github.com/github.com/dcpetty?tab=repositories&sort=name).
+# Tools
+
+| Tool | Description |
+| --- | --- |
+| [./news/](./news) | Create a tracker-free short link for [Google Search](https://google.com/search) queries. |
 
 # [`dcpetty`](https://github.com/dcpetty?tab=repositories&sort=name) Repositories
+
+I have included [instructions](https://dcpetty.github.io/move/) for moving repositories from [`psb-david-petty`](https://github.com/github.com/psb-david-petty?tab=repositories&sort=name) to [`dcpetty`](https://github.com/github.com/dcpetty?tab=repositories&sort=name).
 
 | Pages | Repo | Checked | Description |
 | --- | --- | :-: | --- |
