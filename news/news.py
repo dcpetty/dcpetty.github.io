@@ -54,5 +54,6 @@ disp(f"LOCATION VALUES:{window.location.object_values()}")
 document.querySelector('.hide').style.display = 'none';
 for el in document.querySelectorAll('main,footer'):
     el.style.display = 'block'
+# Set focus on textbox.
 textbox = document.querySelector('input#inp')
 textbox.focus()
