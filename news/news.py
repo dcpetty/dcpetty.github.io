@@ -49,11 +49,9 @@ disp(f"LOCATION:{window.location.href}")
 disp(f"LOCATION KEYS:{window.location.object_keys()}")
 disp(f"LOCATION VALUES:{window.location.object_values()}")
 
-# Set '.hide' display: none; and 'main,footer' display: block;
-# as last PyScript actions.
+# Set '.hide' display: none; and 'main,footer' display: block;,
+# then set focus on textbox as last PyScript actions.
 document.querySelector('.hide').style.display = 'none';
 for el in document.querySelectorAll('main,footer'):
     el.style.display = 'block'
-# Set focus on textbox.
-textbox = document.querySelector('input#inp')
-textbox.focus()
+document.querySelector('input#inp').focus()
