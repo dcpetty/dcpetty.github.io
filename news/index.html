@@ -9,94 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <!-- PyScript CSS -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.2/core.css">
-    <!-- This script tag bootstraps PyScript -->
-    <style>
-      .inter-all {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-      }
-      body { padding: 0 10%; min-width: 600px; }
-      main, footer { display: none; /* removed by PyScript */ }
-      #query { 
-        display: block; width: 100%; padding: 2%;
-        font-size: x-large; text-align: center; 
-      }
-      #query + div { display: flex; flex-direction: row; }
-      label{ padding-right: 1em; font-size: x-large; }
-      input { flex-grow: 1; font-size: x-large; }
-      footer { 
-        border-top: thin solid #ccc; margin: 2em; 
-        color: #fff; font-size: x-small;
-      }
-      footer div { display: inline-block; }
-    </style>
-    <script type="module" src="https://pyscript.net/releases/2025.11.2/core.js"></script>
+    <!-- index.html CSS -->
+    <link rel="stylesheet" href="./news.css">
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.2.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.2.1/core.js"></script>
   </head>
-  <body class="inter-all">
-    <!-- Now you can use <py-script> tag to write your python code inside-->
-    <py-script>
-    import sys
-    from pyscript import display, document, when, window
-    import re
-    from urllib.parse import urlencode, urlparse, urlunparse
-
-    # Initialize static HTML.
-    title = document.querySelector('title')
-    title.innerText = window.location.href
-    header = document.querySelector('#h1-id')
-    header.innerText = window.location.href.replace('/', '/\u200B')
-
-    disp = lambda s, x='\u00A0': display(f"{s}{x}", target='footer')
-
-    # Put URI with query into query link.
-    def put_query(value):
-      # Parse base URI, unparse base URI including query value,
-      # set #query anchor href to URI and text to wrappable URI.
-      sch, loc, pth, _, _, _ = urlparse('https://google.com/search')
-      # https://www.urlencoder.io/python/
-      params = {'tbm': 'nws', 'q': value, } if value else dict()
-      query = urlencode(params)
-      parts = (sch, loc, pth, '', query, '', )
-      uri = urlunparse(parts)
-      anchor = document.querySelector("#query a")
-      anchor.href = uri
-      anchor.text = re.sub(r'([/+])', r'\1' + '\u200B', uri)
-
-    put_query('')
-
-    # Fires on every change (typing, paste, delete)
-    # Alternative: only after each key press (ignores mouse paste)
-    # @when("keyup", "#inp")
-    @when("input", "#inp")
-    def on_input(evt):
-      value = document.querySelector("#inp").value
-      put_query(value)
-
-    # Update footer with display information.
-    disp(sys.version)
-    disp(dir(window.location))
-    disp(window.location.object_keys())
-    disp(window.location.object_values())
-
-    # Set '.hide' display: none; and 'main,footer' display: block;
-    document.querySelector('.hide').style.display = 'none';
-    for el in document.querySelectorAll('main,footer'):
-      el.style.display = 'block'
-    </py-script>
+  <body class="font">
     <p class="hide">Loading&hellip;</p>
     <main>
       <h1 id="h1-id"></h1>
       <p>This page (written with <a href="https://docs.pyscript.net/2025.11.2/">PyScript</a>) creates a clickable <a href="https://www.google.com/search">Google Search</a> link to search <a href="https://www.google.com/news">Google News</a>. Enter your query in the text box.</p>
-      <div id="query"><a href="" target=”_blank”></a></div>
+      <div id="query"><a href="" target=”_blank”><!-- populated by PyScript --></a></div>
       <div>
         <label for="inp">Google News Query: </label>
         <input id="inp" type="text" autocomplete="off">
       </div>
     </main>
-    <footer id="footer"></footer>
-   </body>
+    <footer id="footer"><!-- populated by PyScript --></footer>
+    <!-- Use python3 -m http.server -->
+    <script type="py" src="./news.py" config="./pyscript.json"></script>
+  </body>
 </html>
