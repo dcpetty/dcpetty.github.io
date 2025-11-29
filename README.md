@@ -6,7 +6,7 @@ The [Github](https://github.com/dcpetty/) account of [David C. Petty](http:/dcpe
 
 | Tool | Description |
 | --- | --- |
-| [./news/](./news) | Create a tracker-free short link for [Google Search](https://google.com/search) queries. |
+| [./news/](./news) | Create a tracker-free, clickable, short [Google News](https://www.google.com/news) search link for a query. |
 
 # [`dcpetty`](https://github.com/dcpetty?tab=repositories&sort=name) Repositories
 
