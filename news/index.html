@@ -19,12 +19,15 @@
         font-weight: 600;
         font-style: normal;
       }
-      body { padding: 0 10%; }
-      label, input { width: 80%; font-size: x-large; }
+      body { padding: 0 10%; min-width: 600px; }
+      main, footer { display: none; /* removed by PyScript */ }
       #query { 
         display: block; width: 100%; padding: 2%;
         font-size: x-large; text-align: center; 
       }
+      #query + div { display: flex; flex-direction: row; }
+      label{ padding-right: 1em; font-size: x-large; }
+      input { flex-grow: 1; font-size: x-large; }
       footer { 
         border-top: thin solid #ccc; margin: 2em; 
         color: #fff; font-size: x-small;
@@ -38,26 +41,30 @@
     <py-script>
     import sys
     from pyscript import display, document, when, window
+    import re
     from urllib.parse import urlencode, urlparse, urlunparse
 
     # Initialize static HTML.
     title = document.querySelector('title')
     title.innerText = window.location.href
     header = document.querySelector('#h1-id')
-    header.innerText = window.location.href
+    header.innerText = window.location.href.replace('/', '/\u200B')
 
     disp = lambda s, x='\u00A0': display(f"{s}{x}", target='footer')
 
     # Put URI with query into query link.
     def put_query(value):
+      # Parse base URI, unparse base URI including query value,
+      # set #query anchor href to URI and text to wrappable URI.
       sch, loc, pth, _, _, _ = urlparse('https://google.com/search')
       # https://www.urlencoder.io/python/
       params = {'tbm': 'nws', 'q': value, } if value else dict()
       query = urlencode(params)
       parts = (sch, loc, pth, '', query, '', )
       uri = urlunparse(parts)
-      document.querySelector("#query a").text = uri
-      document.querySelector("#query a").href = uri
+      anchor = document.querySelector("#query a")
+      anchor.href = uri
+      anchor.text = re.sub(r'([/+])', r'\1' + '\u200B', uri)
 
     put_query('')
 
@@ -74,14 +81,22 @@
     disp(dir(window.location))
     disp(window.location.object_keys())
     disp(window.location.object_values())
+
+    # Set '.hide' display: none; and 'main,footer' display: block;
+    document.querySelector('.hide').style.display = 'none';
+    for el in document.querySelectorAll('main,footer'):
+      el.style.display = 'block'
     </py-script>
+    <p class="hide">Loading&hellip;</p>
     <main>
       <h1 id="h1-id"></h1>
       <p>This page (written with <a href="https://docs.pyscript.net/2025.11.2/">PyScript</a>) creates a clickable <a href="https://www.google.com/search">Google Search</a> link to search <a href="https://www.google.com/news">Google News</a> for your query.</p>
       <div id="query"><a href="" target=”_blank”></a></div>
-      <label for="inp">Google News Query: </label>
-      <input id="inp" type="text" autocomplete="off">
+      <div>
+        <label for="inp">Google News Query: </label>
+        <input id="inp" type="text" autocomplete="off">
+      </div>
     </main>
-    <footer id="footer" ></footer>
-  </body>
+    <footer id="footer"></footer>
+   </body>
 </html>
