@@ -1,0 +1,22 @@
+.font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+body { padding: 0 10%; min-width: 600px; }
+a, h1, h2, h3, h4, h5, h6 { color: rebeccapurple; }
+main, footer { display: none; /* removed by PyScript */ }
+#query { 
+  display: block; width: 100%; padding: 2%;
+  font-size: x-large; text-align: center; 
+}
+#query + div { display: flex; flex-direction: row; }
+label { padding-right: 1em; font-size: x-large; }
+input { flex-grow: 1; font-size: x-large; }
+footer { 
+  border-top: thin solid #ccc; margin: 2em; 
+  color: #fff; font-size: x-small;
+}
+footer:hover { color: #999; }
+footer div { display: block; /* inline-block for one-line display */ }
