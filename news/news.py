@@ -7,6 +7,12 @@ from re import sub
 from sys import version
 from urllib.parse import urlencode, urlparse, urlunparse
 
+"""
+This PyScript loaded from index.html creates a tracker-free, 
+clickable, short Google Search link to search Google News. 
+The link updates as you enter your query.
+"""
+
 # Initialize static HTML.
 title = document.querySelector('title')
 title.innerText = window.location.href
