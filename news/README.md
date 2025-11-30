@@ -10,7 +10,7 @@ This tool creates a tracker-free, clickable, short [Google Search](https://www.g
   - I learned of PyScript ([https://pyscript.net/](https://pyscript.net/)) in an on-line post .
   - By including [`https://pyscript.net/releases/2025.11.2/core.js`](https://pyscript.net/releases/2025.11.2/core.js) (the latest version) and adding a `<script type="py"`&hellip; tag, you can embed [Python](https://docs.python.org/3/) with access to the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
   - [*Beginning PyScript*](https://docs.pyscript.net/2025.11.2/beginning-pyscript/) is a good primer.
-  - [`pyscript.when`](https://docs.pyscript.net/2025.11.2/api/#pyscriptwhen) indicating that the decorated function should handle the specified events for selected elements.
+  - The [`pyscript.when`](https://docs.pyscript.net/2025.11.2/api/#pyscriptwhen) decorator indicates that the decorated function should handle the specified events for elements with matching selectors.
   - The equivalent of [Python](https://docs.python.org/3/) [`print`](https://docs.python.org/3/library/functions.html#print) is [`pyscript.display`](https://docs.pyscript.net/2025.11.2/api/#pyscriptdisplay), which appends a `<div>` to the `target` ID.
 - HTML / CSS / JavaScript
   - Because [PyScript](https://pyscript.net/) loads slowly, I made a `class="hide"` property for some elements so that &mdash; as the very last action of the [PyScript](https://pyscript.net/) &mdash; those elements initially loaded can be hidden (with `display: none;`) and other elements (`main,footer`) can be displayed (with `display: block;`).
