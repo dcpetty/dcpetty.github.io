@@ -17,7 +17,7 @@ The link updates as you enter your query.
 title = document.querySelector('title')
 title.innerText = window.location.href
 header = document.querySelector('#h1-id')
-header.innerText = window.location.href.replace('/', '/\u200B')
+header.href = window.location.href
 
 # disp appends NBSP to s before display (for display: inline-block)
 disp = lambda s, x='\u00A0': display(f"{s}{x}", target='footer')
@@ -58,7 +58,8 @@ disp(f"LOCATION VALUES:{window.location.object_values()}")
 
 # Set '.hide' display: none; and 'main,footer' display: block;,
 # then set focus on textbox as last PyScript actions.
-document.querySelector('.hide').style.display = 'none';
+for el in document.querySelectorAll('.hide'):
+    el.style.display = 'none'
 for el in document.querySelectorAll('main,footer'):
     el.style.display = 'block'
 document.querySelector('input#inp').focus()
