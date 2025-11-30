@@ -4,9 +4,9 @@ The [Github](https://github.com/dcpetty/) account of [David C. Petty](http:/dcpe
 
 # Tools
 
-| Tool | Description |
-| --- | --- |
-| [./news/](./news) | Create a tracker-free, clickable, short [Google News](https://www.google.com/news) search link for a query. |
+| Tool | Repo | Description |
+| --- | --- | --- |
+| [./news](./news) | [news](https://github.com/dcpetty/dcpetty.github.io/tree/master/news) | Create a tracker-free, clickable, short [Google News](https://www.google.com/news) search link for a query. |
 
 # [`dcpetty`](https://github.com/dcpetty?tab=repositories&sort=name) Repositories
 
