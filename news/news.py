@@ -16,8 +16,8 @@ The link updates as you enter your query.
 # Initialize static HTML.
 title = document.querySelector('title')
 title.innerText = window.location.href
-header = document.querySelector('#h1-id')
-header.href = window.location.href
+header = document.querySelector('#h1-href')
+header.innerHTML = window.location.href.replace('/', '/\u200B')
 
 # disp appends NBSP to s before display (for display: inline-block)
 disp = lambda s, x='\u00A0': display(f"{s}{x}", target='footer')
