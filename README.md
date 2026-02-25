@@ -30,6 +30,7 @@ I have included [instructions](https://dcpetty.github.io/move/) for moving repos
 | [./p5js](https://dcpetty.github.io/p5js/) | [p5js](https://github.com/dcpetty/p5js/) | &#x2713; | Projects developed to learn more about [p5.js](https://p5js.org/).|
 | [./packagetest](https://dcpetty.github.io/packagetest/) | [packagetest](https://github.com/dcpetty/packagetest/) | &#x2612; | packagetest |
 | [./pythontemplate](https://dcpetty.github.io/pythontemplate/) | [pythontemplate](https://github.com/dcpetty/pythontemplate/) | &#x2612; | pythontemplate |
+| [./rgq](https://dcpetty.github.io/rgq/) | [rgq](https://github.com/dcpetty/rgq/) | &#x2713; | Classroom computing quotation posters inspired by [Ria Galanos](https://github.com/riagalanos/). |
 
 Checked means:
 
