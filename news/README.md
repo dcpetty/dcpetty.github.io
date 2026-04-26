@@ -20,3 +20,7 @@ This tool creates a tracker-free, clickable, short [Google Search](https://www.g
 - Python
   - Using [Python](https://docs.python.org/3/) in a webpage was refreshing. I could use the techniques from, *e.g.*, the [`re`](https://docs.python.org/3/library/re.html), [`sys`](https://docs.python.org/3/library/sys.html), and [`urllib.parse`](https://docs.python.org/3/library/urllib.parse.html) libraries, while also having access to [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) and [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) from the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
   - I refreshed my understanding of [`urlencode`](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlencode), [`urlparse`](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse), [`urlunparse`](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlunparse) &amp; from [`urllib.parse`](https://docs.python.org/3/library/urllib.parse.html). The article [*How to encode URLs in Python*](https://www.urlencoder.io/python/) was helpful.
+
+<hr>
+
+[&#128279; permalink](https://dcpetty.github.io/news/) and [&#128297; repository](https://github.com/dcpetty/dcpetty.github.io/tree/master/news) for this page.

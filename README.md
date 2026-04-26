@@ -74,4 +74,3 @@ These organizations were created by or joined by `dcpetty`.
 <hr>
 
 [&#128279; permalink](https://dcpetty.github.io/) and [&#128297; repository](https://github.com/dcpetty/dcpetty.github.io/) for this page.
-32e
