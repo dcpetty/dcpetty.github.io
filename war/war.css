@@ -1,0 +1,32 @@
+/* Written by ChatGPT https://chatgpt.com/share/69ee57d6-c768-83ea-a92e-e2bf54c7a19a */
+body {
+  font-family: monospace;
+  text-align: center;
+  margin-top: 8%;
+  background: #111;
+  color: #0f0;
+}
+
+#cost {
+  font-size: 4em;
+  margin: 2rem 0;
+}
+
+.label {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+#citations {
+  font-size: 0.8em;
+  color: #aaa;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 1.2em;
+}
+
+a {
+  color: #639;
+}
