@@ -7,6 +7,7 @@ The [Github](https://github.com/dcpetty/) account of [David C. Petty](http:/dcpe
 | Tool | Repo | Description |
 | --- | --- | --- |
 | [./news](./news) | [news](https://github.com/dcpetty/dcpetty.github.io/tree/master/news) | Create a tracker-free, clickable, short [Google News](https://www.google.com/news) search link for a query. |
+| [./war](./war) | [war](https://github.com/dcpetty/dcpetty.github.io/tree/master/war) | Instantaneous estimator of the <a href="https://costsofwar.watson.brown.edu/">costs</a> of the war begun on <a href="https://en.wikipedia.org/wiki/2026_Iran_war">2026/02/28</a>. |
 
 # [`dcpetty`](https://github.com/dcpetty?tab=repositories&sort=name) Repositories
 
