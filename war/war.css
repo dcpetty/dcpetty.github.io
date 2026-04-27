@@ -1,20 +1,21 @@
 /* Written by ChatGPT https://chatgpt.com/share/69ee57d6-c768-83ea-a92e-e2bf54c7a19a */
 body {
   font-family: monospace;
+  color: #ccc;
   text-align: center;
   margin-top: 8%;
   background: #111;
-  color: #0f0;
+  max-width: 95vw;
 }
 
 #cost {
   font-size: 4em;
+  color: #0f0;
   margin: 2rem 0;
 }
 
 .label {
   font-size: 1.2em;
-  color: #ccc;
 }
 
 #citations {
@@ -28,5 +29,14 @@ body {
 }
 
 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#citations a {
   color: #639;
 }
