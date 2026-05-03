@@ -19,7 +19,7 @@ EARLY_PHASE = [
 ]
 
 # Steady-state average estimated rate after early phase
-STEADY_RATE = 1_000_000_000  # dollars per day
+STEADY_RATE = 800_000_000  # dollars per day
 
 # =========================
 # DERIVED
