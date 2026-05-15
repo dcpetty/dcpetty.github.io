@@ -13,10 +13,10 @@ WAR_START = datetime(2026, 2, 28, tzinfo=timezone.utc)
 # Piecewise early-phase rates:
 # (duration_in_days, dollars_per_day)
 EARLY_PHASE = [
-    (4.17, 891_000_000),    # first 100 hours ≈ 4.17 days
+    (4.17, 891_000_000),    # first 100 hours ~ 4.17 days
     (1.83, 1_800_000_000),  # up to day 6 total
-    (6.0, 601_000_000),     # days 7–12
-    (26.0, 800_000_000),    # days 13–38 until so-called 'ceasefire'
+    (6.0, 601_000_000),     # days 7-12
+    (26.0, 800_000_000),    # days 13-38 until so-called 'ceasefire'
 ]
 
 # Steady-state average estimated rate after early phase
