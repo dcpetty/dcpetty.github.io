@@ -19,10 +19,14 @@
     <p class="hide">Loading&hellip;</p>
     <main>
       <h1 id="h1-href"><!-- populated by PyScript --></h1>
-      <p>This <a href="https://github.com/dcpetty/dcpetty.github.io/tree/master/news">tool</a> (written with <a href="https://docs.pyscript.net/2025.11.2/">PyScript</a>) creates a clickable <a href="https://www.google.com/search">Google Search</a> short link to search <a href="https://www.google.com/news">Google News</a>. Enter your query in the text box.</p>
-      <div id="query"><a href="" target=”_blank”><!-- populated by PyScript --></a></div>
-      <div>
-        <label for="inp">Google News Query:</label>
+      <p>This <a href="https://github.com/dcpetty/dcpetty.github.io/tree/master/news">tool</a> (written with <a href="https://docs.pyscript.net/2025.11.2/">PyScript</a>) creates a clickable <a href="https://www.google.com/search">Google Search</a> short link to search <a href="https://www.google.com/news">Google News</a>, <a href="https://www.google.com/maps">Google Maps</a>, &amp; <a href="https://www.google.com/imghp">Google Images</a>. Enter your query in the text box.</p>
+      <div id="queries">
+        <div id="queryn"><span>News:</span><a href="" target=”_blank”><!-- populated by PyScript --></a></div>
+        <div id="querym"><span>Maps:</span><a href="" target=”_blank”><!-- populated by PyScript --></a></div>
+        <div id="queryi"><span>Images:</span><a href="" target=”_blank”><!-- populated by PyScript --></a></div>
+      </div>
+      <div id="inputs">
+        <label for="inp">Query:</label>
         <input id="inp" type="text" autocomplete="off">
       </div>
     </main>

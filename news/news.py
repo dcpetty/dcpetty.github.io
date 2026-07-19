@@ -22,24 +22,34 @@ header.innerHTML = window.location.href.replace('/', '/\u200B')
 # disp appends NBSP to s before display (for display: inline-block)
 disp = lambda s, x='\u00A0': display(f"{s}{x}", target='footer')
 
-def put_query(value):
+data = (
+    # selector, URI location, URI params, query key
+    ( '#queryn', 'search', {'tbm': 'nws', }, 'q', ),
+    ( '#querym', 'maps/search/', {'api': '1', }, 'query', ),
+    ( '#queryi', 'search', {'tbm': 'isch', }, 'q', ),
+)
+def put_query(selector, path = '', params = dict()):
     """
-    Put URI with value query into #query anchor. Parse base URI, 
-    unparse base URI including query value (if any), set that URI
-    as #query anchor href and wrappable version (ZERO WIDTH SPACEs) 
-    as #query anchor text. (See: https://www.urlencoder.io/python/)
+    Put URI with urlencoded params and appended path into selector.
+    Parse base URI appended with path, unparse base URI including 
+    query value (if any), set that URI as selector anchor href
+    and wrappable version (ZERO WIDTH SPACEs) as selector anchor text. 
+    (See: https://www.urlencoder.io/python/)
     """
-    base = 'https://google.com/search'
+    #from js import console
+    #console.log(f"{selector} {path} {params}")
+
+    base = 'https://google.com/' + (path if path else '')
     sch, loc, pth, _, _, _ = urlparse(base)
-    params = {'tbm': 'nws', 'q': value, } if value else dict()
     query = urlencode(params)
     parts = (sch, loc, pth, '', query, '', )
     uri = urlunparse(parts)
-    anchor = document.querySelector('#query a')
+    anchor = document.querySelector(f'{selector} a')
     anchor.href = uri
     anchor.text = sub(r'([/+])', r'\1' + '\u200B', uri)
 
-put_query('') # initially empty query
+for sel, pth, _, _, in data:
+    put_query(sel, pth) # initially empty queries
 
 # Fires on every change (typing, paste, delete)
 # Alternative: only after each key press (ignores mouse paste)
@@ -47,7 +57,9 @@ put_query('') # initially empty query
 @when("input", "#inp")
 def on_input(evt):
     value = document.querySelector("#inp").value
-    put_query(value)
+    for sel, pth, par, key, in data:
+        put_query(sel, pth, par | { key: value, } )
+
 
 # Update footer with display information.
 disp(f"DEBUG:")
