@@ -15,13 +15,14 @@ EARLY_PHASE = [
     (4.17, 891_000_000),    # after day 0 → day 4.17: 02/28-03/04, first 100 hours
     (1.83, 1_800_000_000),  # after day 4.17 → day 6: 03/04-03/06, early surge through day 6
     (6.0, 601_000_000),     # after day 6 → day 12: 03/06-03/12, reduced early-war phase
-    (26.0, 800_000_000),    # after day 12 → day 38: 03/12-04/07, hostilities before so-called 'ceasefire'
+    (26.0, 1_000_000_000),  # after day 12 → day 38: 03/12-04/07, sustained hostilities
     (69.0, 750_000_000),    # after day 38 → day 107: 04/07-06/15, so-called 'ceasefire' period
     (13.0, 400_000_000),    # after day 107 → day 120: 06/15-06/28, reduced operations estimate post-MOU
+    (20.0, 750_000_000),    # after day 120 → day 140: 06/28-07/18, renewed hostilities
 ]
 
-# Steady-state average estimated rate after early phase
-STEADY_RATE = 800_000_000   # dollars per day (was $800M average after day 120)
+# Steady-state average estimated dollars per day rate after latest TACO
+STEADY_RATE = 500_000_000   # after day 140: 07/18-present, ongoing lower-intensity operations
 
 # =========================
 # DERIVED
