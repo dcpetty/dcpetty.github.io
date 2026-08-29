@@ -67,15 +67,18 @@ def format_money(x):
 # =========================
 
 async def update():
-    el = document.getElementById("cost")
+    cost_el = document.getElementById("cost")
+    day_el = document.getElementById("day")
 
     while True:
         now = datetime.now(timezone.utc)
         elapsed = (now - WAR_START).total_seconds()
+        day = elapsed / 86400
 
         total_cost = compute_cost(elapsed)
 
-        el.innerText = format_money(total_cost)
+        cost_el.innerText = format_money(total_cost)
+        day_el.innerText = str(int(day))
 
         await asyncio.sleep(0.1)
 
