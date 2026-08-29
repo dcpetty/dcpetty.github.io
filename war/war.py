@@ -67,6 +67,8 @@ def format_money(x):
 # =========================
 
 async def update():
+    """Infinite loop to calculate total cost and elapsed day and update
+    innerText of elements with ids "cost" and "day" every 100ms."""
     cost_el = document.getElementById("cost")
     day_el = document.getElementById("day")
 
@@ -84,4 +86,4 @@ async def update():
 
 
 # run loop
-asyncio.ensure_future(update())
+asyncio.get_event_loop().create_task(update())

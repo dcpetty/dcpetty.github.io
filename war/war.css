@@ -21,8 +21,7 @@ body {
 
 .commentary, #citations {
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   text-align: left;
   line-height: 2em;
 }
@@ -31,6 +30,10 @@ body {
   font-size: 0.8em;
   color: #aaa;
   margin-top: 2em;
+}
+
+.footer {
+  text-align: center;
 }
 
 a {
