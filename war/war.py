@@ -1,4 +1,11 @@
-# Written by ChatGPT https://chatgpt.com/share/69ee57d6-c768-83ea-a92e-e2bf54c7a19a
+# Written by dcp & ChatGPT https://chatgpt.com/share/69ee57d6-c768-83ea-a92e-e2bf54c7a19a
+
+"""
+The MAGA war-of-choice for Israel against Iran known as Epic Cluster
+has cost billions of US$ and untold lives with no oversight. This 
+instantaneous cost-of-war counter uses documented estimates for the
+several phases of the so-far-unedding conflict, punctuated by TACOs.
+"""
 
 from datetime import datetime, timezone
 import asyncio
