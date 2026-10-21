@@ -9,7 +9,7 @@ from urllib.parse import urlencode, urlparse, urlunparse
 
 """
 This PyScript loaded from index.html creates a tracker-free, clickable, 
-short Google Search link that searches only ai2.appinventor.mit.edu
+short Google Search link that searches only ai2a.appinventor.mit.edu
 (i.e., https://google.com/search?q=site:appinventor.mit.edu+foo+bar).
 The link updates as you enter your query.
 """
@@ -24,7 +24,7 @@ header.innerHTML = window.location.href.replace('/', '/\u200B')
 disp = lambda s, x='\u00A0': display(f"{s}{x}", target='footer')
 
 # Search operator prefixed to every query.
-SITE = 'site:ai2.appinventor.mit.edu'
+SITE = 'site:ai2a.appinventor.mit.edu'
 
 data = (
     # selector, URI location, URI params, query key
