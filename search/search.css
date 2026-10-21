@@ -19,5 +19,5 @@ footer {
   border-top: thin solid #ccc; margin: 2em; 
   color: #fff; font-size: x-small;
 }
-footer:hover { color: #999; }
+/* footer:hover { color: #999; } */
 footer div { display: block; /* inline-block for one-line display */ }
