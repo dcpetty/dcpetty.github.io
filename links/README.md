@@ -15,7 +15,7 @@ This tool creates a tracker-free, clickable, short [Google Search](https://www.g
 - HTML / CSS / JavaScript
   - Because [PyScript](https://pyscript.net/) loads slowly, I made a `class="hide"` property for some elements so that &mdash; as the very last action of the [PyScript](https://pyscript.net/) &mdash; those elements initially loaded can be hidden (with `display: none;`) and other elements (`main,footer`) can be displayed (with `display: block;`).
   - I used the `@when("input", "#id")` decorator to update the '*tracker-free, clickable, short [Google Search](https://www.google.com/search) link*' as each character is entered.
-  -  `news.css` is pretty standard formatting for a simple webpage. It includes one [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for the `<label>` and `<input>`.
+  -  `links`.css` is pretty standard formatting for a simple webpage. It includes one [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for the `<label>` and `<input>`.
   -  There *is no [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*, except what is accessed through [PyScript](https://pyscript.net/)!
 - Python
   - Using [Python](https://docs.python.org/3/) in a webpage was refreshing. I could use the techniques from, *e.g.*, the [`re`](https://docs.python.org/3/library/re.html), [`sys`](https://docs.python.org/3/library/sys.html), and [`urllib.parse`](https://docs.python.org/3/library/urllib.parse.html) libraries, while also having access to [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) and [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) from the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
@@ -23,4 +23,4 @@ This tool creates a tracker-free, clickable, short [Google Search](https://www.g
 
 <hr>
 
-[&#128279; permalink](https://dcpetty.github.io/news/) and [&#128297; repository](https://github.com/dcpetty/dcpetty.github.io/tree/master/news) for this page.
+[&#128279; permalink](https://dcpetty.github.io/links/) and [&#128297; repository](https://github.com/dcpetty/dcpetty.github.io/tree/master/links) for this page.
