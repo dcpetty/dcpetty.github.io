@@ -1,8 +1,8 @@
-# [News](https://dcpetty.github.io/news/)
+# [Links](https://dcpetty.github.io/links/)
 
 This tool was written with [PyScript](https://pyscript.net/) &mdash; a way of mixing [Python](https://docs.python.org/3/) with [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) &mdash; for those of us comfortable with things [Pythonic](https://realpython.com/ref/glossary/pythonic/).
 
-This tool creates a tracker-free, clickable, short [Google Search](https://www.google.com/search) link to search [Google News](https://www.google.com/news). The link updates as you enter your query.
+This tool creates a tracker-free, clickable, short [Google Search](https://www.google.com/search) link to search [Google News](https://www.google.com/news), [Google Maps](https://www.google.com/maps), and [Google Images](https://www.google.com/imghp). The link updates as you enter your query.
 
 ## What I learned
 
