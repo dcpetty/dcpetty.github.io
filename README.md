@@ -7,6 +7,7 @@ The [Github](https://github.com/dcpetty/) account of [David C. Petty](http:/dcpe
 | Tool | Repo | Description |
 | --- | --- | --- |
 | [./links](./links) | [links](https://github.com/dcpetty/dcpetty.github.io/tree/master/links) | Create tracker-free, clickable, short [Google News](https://www.google.com/news), [Google Maps](https://www.google.com/maps), &amp; [Google Images](https://www.google.com/imghp) search links for a query. |
+| [./search](./search) | [search](https://github.com/dcpetty/dcpetty.github.io/tree/master/search) | Create a tracker-free, clickable, short link to search the [MIT App Inventor](https://appinventor.mit.edu) documentation site (`site:ai2a.appinventor.mit.edu`). |
 | [./war](./war) | [war](https://github.com/dcpetty/dcpetty.github.io/tree/master/war) | Instantaneous estimator of the <a href="https://costsofwar.watson.brown.edu/">costs</a> of the war begun on <a href="https://en.wikipedia.org/wiki/2026_Iran_war">2026/02/28</a>. |
 
 # [`dcpetty`](https://github.com/dcpetty?tab=repositories&sort=name) Repositories
