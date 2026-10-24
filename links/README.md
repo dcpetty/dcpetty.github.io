@@ -14,7 +14,7 @@ This tool creates a tracker-free, clickable, short [Google Search](https://www.g
   - The equivalent of [Python](https://docs.python.org/3/) [`print`](https://docs.python.org/3/library/functions.html#print) is [`pyscript.display`](https://docs.pyscript.net/2025.11.2/api/#pyscriptdisplay), which appends a `<div>` to the `target` ID.
 - HTML / CSS / JavaScript
   - Because [PyScript](https://pyscript.net/) loads slowly, I made a `class="hide"` property for some elements so that &mdash; as the very last action of the [PyScript](https://pyscript.net/) &mdash; those elements initially loaded can be hidden (with `display: none;`) and other elements (`main,footer`) can be displayed (with `display: block;`).
-  - I used the `@when("input", "#id")` decorator to update the '*tracker-free, clickable, short [Google Search](https://www.google.com/search) link*' as each character is entered.
+  - I used the `@when("input", "#id")` decorator to update the '*tracker-free, clickable, short [Google Search](https://www.google.com/search) links*' as each character is entered.
   -  `links`.css` is pretty standard formatting for a simple webpage. It includes one [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for the `<label>` and `<input>`.
   -  There *is no [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*, except what is accessed through [PyScript](https://pyscript.net/)!
 - Python
